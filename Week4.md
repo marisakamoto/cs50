@@ -19,34 +19,32 @@
     
 ## 2. Address
 Print the address of a variable in hexadecimal
-> int n = 50;
-> 
-> printf("%p\n", &n);
+
+    int n = 50;
+    printf("%p\n", &n);
 
 Now this will return the contents of the address (this case 50)
-> int n = 50;
-> 
-> printf("%i\n", *&n);
+
+    int n = 50;
+    printf("%i\n", *&n);
 
 ## 3. Pointers
 Declaring a pointer:
-> int n = 50;
-> 
-> int *p = &n;
-> 
-> printf("%p\n", p);
+
+    int n = 50;
+    int *p = &n;
+    printf("%p\n", p);
 
 Returning its value:
-> int n = 50;
-> 
-> int *p = &n;
-> 
-> printf("%i\n", *p);
+
+    int n = 50;
+    int *p = &n;
+    printf("%i\n", *p);
 
 Pointers take 8 bytes of Memory and they store adresses (point to there)
 
 ## 5. Strings
-> string s = "Hi!";
+    > string s = "Hi!";
 
 s[0] = 'H' -&-> 0x123 
 
@@ -63,18 +61,41 @@ They are stored continuously one byte apart because every char takes one byte.
 <img src="https://user-images.githubusercontent.com/43222644/125205721-15773500-e25a-11eb-9372-d8e2d1bf3300.png" alt="drawing" width="200"/>
 
 - Strings do not exist as a DataType in C. Instead, we can use char *s that is a pointer that points to a char address
-> char *s = "Hi!";
 
-> printf("%c\", *s);
-> printf("%c\", *(s+1));
+      char *s = "Hi!";
+      printf("%c\", *s);
+      printf("%c\", *(s+1)); /pointer arithmetic
 
 It will print H I (adds a byte)
 
 Up until now CS50 have been using string as a datatype because it has definef in a typedef:
 > typedef char *string;
 
-## 6. Compare.c
+## 6. Malloc
+How to copy a string?
 
+    int main(void)
+    {
+       char *s = "Hi!";
+       char *t = malloc(strlen(s) + 1); /add 1 to store the ending null /0
+       for (int i = 0; n = strlen(s); i<=n; i++)
+        {
+          t[i] = s[i]
+        }
+
+        return;
+        
+     }
+     
+NULL != '\0'
+NULL is for pointers (Null pointer, the absense of an address)
+'\0' is for characters
+
+    strcpy(t,s); // (copies the string (destination, origin))
+    
+If you use malloc you have the onus to desalocate the memory
+
+    free(t);
 
 
 
