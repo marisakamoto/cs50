@@ -17,4 +17,65 @@
     Black, the absense of all colors is = #000000
     While white is #FFFFFF
     
-## 2. Pointers
+## 2. Address
+Print the address of a variable in hexadecimal
+> int n = 50;
+> 
+> printf("%p\n", &n);
+
+Now this will return the contents of the address (this case 50)
+> int n = 50;
+> 
+> printf("%i\n", *&n);
+
+## 3. Pointers
+Declaring a pointer:
+> int n = 50;
+> 
+> int *p = &n;
+> 
+> printf("%p\n", p);
+
+Returning its value:
+> int n = 50;
+> 
+> int *p = &n;
+> 
+> printf("%i\n", *p);
+
+Pointers take 8 bytes of Memory and they store adresses (point to there)
+
+## 5. Strings
+> string s = "Hi!";
+
+s[0] = 'H' -&-> 0x123 
+
+s[1] = 'I' -&-> 0x124
+
+s[2] = '!' -&-> 0x125 
+
+s[3] = '\0'-&-> 0x126 
+
+They are stored continuously one byte apart because every char takes one byte.
+
+&s = 0x123 (the address of s is on the first char)
+
+<img src="https://user-images.githubusercontent.com/43222644/125205721-15773500-e25a-11eb-9372-d8e2d1bf3300.png" alt="drawing" width="200"/>
+
+- Strings do not exist as a DataType in C. Instead, we can use char *s that is a pointer that points to a char address
+> char *s = "Hi!";
+
+> printf("%c\", *s);
+> printf("%c\", *(s+1));
+
+It will print H I (adds a byte)
+
+Up until now CS50 have been using string as a datatype because it has definef in a typedef:
+> typedef char *string;
+
+## 6. Compare.c
+
+
+
+
+
