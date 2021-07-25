@@ -231,4 +231,22 @@ Copy files Program
     fclose(destination);
     return 0;
     }
-        
+
+## 13. Typedef
+
+    typedef char* string;
+    typedef unsigned char byte;
+    typedef struct car
+    {
+      int year;
+      make char[10];
+      plate char[7];
+      color char[10];
+    }
+    car_t;
+    
+    int main(void)
+    {
+      struct car my_car;
+      car_t my_car;
+    }
